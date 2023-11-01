@@ -119,18 +119,18 @@
             <div class="name"><h2>Jadis Montijo</h2></div>
             <div class="details">
               <i class="fas fa-user-plus"></i>
-              <a href="#">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#addDetails">
                 <p class="sm-p">Add my pronouns</p>
               </a>
             </div>
             <div class="details">
               <i class="fas fa-map-marker"></i>
-              <a href="#">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#addDetails">
                 <p class="sm-p">Add my location</p>
               </a>
             </div>
             <div class="details add-description">
-              <a href="#">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#addDetails">
                 <p class="lg-p">Add a description</p>
               </a>
             </div>
@@ -138,7 +138,7 @@
         </div>
         <div class="edit-profile-container">
           <div class="multi-action">
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#addDetails">
               <div class="action">
                 <p class="md-p">Edit Profile Header</p>
                 <div class="image-container">
@@ -290,5 +290,201 @@
         </div>
       </div>
     </footer>
+    <!-- Screen 2 Modal -->
+    <div
+      class="modal fade custom-modal-container"
+      id="addDetails"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Get your Modality profile started</h4>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                Describe your practice in at least 10 words and we will use AI
+                to suggest a profile for you.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Describe your practice</p>
+              </div>
+              <div class="comment">
+                <textarea name="comment" id="" cols="15" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Fill in my profile manually
+            </button>
+            <button type="button" id="generateBtn" class="btn-modal black md-p">
+              Generate
+              <i class="fas fa-bolt" style="color: white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Screen 3 Modal -->
+    <div
+      class="modal fade"
+      id="secondModal"
+      tabindex="-1"
+      aria-labelledby="secondModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Get your Modality profile started</h4>
+            </div>
+            <div class="help-me">
+              <button
+                type="button"
+                id="generateBtn"
+                class="btn-modal black md-p"
+              >
+                Help me generate my profile
+              </button>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                All fields are optional but we find that more complete profiles
+                help build trust with potential clients.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Your tagline</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  1-4 words that describe what you do (eg."Reiki Healing" or
+                  "Student Mentorship")
+                </p>
+              </div>
+              <div class="input-field">
+                <input type="text" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Profile photo</p>
+              </div>
+
+              <div class="modal-upload">
+                <div class="update-picture">
+                  <div class="custom-file">
+                    <input
+                      type="file"
+                      class="custom-file-input upload-file"
+                      id="profileImage"
+                    />
+                  </div>
+                </div>
+                <div class="add-photo">
+                  <button type="button" class="btn-modal md-p">
+                    Add a photo
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Pronouns</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">For example: she/her, they/them, ze/hir</p>
+              </div>
+              <div class="input-field">
+                <input type="text" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Location</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">All sessions are remote by default.</p>
+              </div>
+              <div class="input-field">
+                <input type="text" />
+              </div>
+              <div class="checkbox-container">
+                <input type="checkbox" id="inPersonCheckbox" />
+                <label for="inPersonCheckbox"
+                  >I'm also available for in-person sessions</label
+                >
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Tags</p>
+              </div>
+              <div class="input-field">
+                <input type="text" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Description</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief description of your practice in 250 characters or
+                  less. This helps clients discover what kind of practitioner
+                  you are.
+                </p>
+              </div>
+              <div class="comment">
+                <textarea name="comment" id="" cols="15" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer screen-three">
+            <button type="button" id="generateBtn" class="btn-modal black md-p">
+              Save and Add Services
+              <i class="fas fa-arrow-right" style="color: white"></i>
+            </button>
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Save and View Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
