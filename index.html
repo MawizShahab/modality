@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-mRCVjw7U5rAI7JHEwIYJ2UM6uVoYsEMopp4l91upjHH6FkisqbJmb2N6uS6oOSBdg"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Font families -->
+
+    <!-- Custom CSS Styles-->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./custom-font.css" />
+    <!-- Bootstrap js and jQuery-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom js for slider-->
+    <script type="text/javascript" src="./js/custom.js"></script>
+
+    <title>Modality</title>
+  </head>
+  <body>
+    <header class="header-container main-container row">
+      <nav class="navbar navbar-expand-lg rm-pd">
+        <div class="header-logo col-md-3 rm-pd">
+          <h1><a href="#">Modality</a></h1>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            id="navbarToggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div
+          class="collapse navbar-collapse categories-container col-md-6 rm-pd"
+          id="navbarNav"
+        >
+          <nav class="categories">
+            <ul class="navbar-nav list-inline">
+              <li class="list-inline-item">
+                <a class="goto" href="./index.html" data-category="discover"
+                  >Discover</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a class="goto" href="#" data-category="get-training"
+                  >Get Training</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a class="goto" href="#" data-category="about-modality"
+                  >About Modality</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="profile-container col-md-3 rm-pd">
+          <div class="profile">
+            <img src="./images/profile.png" alt="profile" />
+          </div>
+          <div class="name">
+            <h4>Jadis Montijo</h4>
+            <img src="./images/down.svg" alt="chevron" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="add-profile-container row body-content">
+      <div class="profile-title col-md-8">
+        <h1>Add a tagline</h1>
+        <div class="share-links-container">
+          <p class=".md-p">
+            <img class="img-icon" src="./images/share.png" alt="" />
+            <a href="#">Share my profile</a>
+          </p>
+          <p class=".md-p">
+            <img class="img-icon" src="./images/view.png" alt="" />
+            <a href="#">View my public profile</a>
+          </p>
+        </div>
+        <div class="upload-profile-container">
+          <div class="update-picture">
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input upload-file"
+                id="profileImage"
+              />
+            </div>
+          </div>
+          <div class="profile-details">
+            <div class="name"><h2>Jadis Montijo</h2></div>
+            <div class="details">
+              <i class="fas fa-user-plus"></i>
+              <a href="#">
+                <p class="sm-p">Add my pronouns</p>
+              </a>
+            </div>
+            <div class="details">
+              <i class="fas fa-map-marker"></i>
+              <a href="#">
+                <p class="sm-p">Add my location</p>
+              </a>
+            </div>
+            <div class="details add-description">
+              <a href="#">
+                <p class="lg-p">Add a description</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="edit-profile-container">
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Edit Profile Header</p>
+                <div class="image-container">
+                  <i class="fas fa-edit plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category-wise-container">
+      <div class="options">
+        <p class="lg-p"><a href="#">Services</a></p>
+        <p class="lg-p"><a href="#">Values</a></p>
+        <p class="lg-p"><a href="#">Background</a></p>
+        <p class="lg-p"><a href="#">Testimonials</a></p>
+        <p class="lg-p"><a href="#">Resources</a></p>
+        <p class="lg-p"><a href="#">Scope of Practice</a></p>
+      </div>
+    </section>
+    <section class="all-categories-container">
+      <div class="all-categories">
+        <div class="action-container">
+          <h4>Services</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add services</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Values</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add values</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Background</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add background</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Testimonials</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add testimonials</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Request a testimonial from a client</p>
+                <div class="image-container">
+                  <i class="fas fa-quote-left"></i>
+                  <!-- <img class="img-icon" src="./images/request.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Resources</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add resource</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Scope of Practice</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add scope of practice</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="action-container">
+          <h4>Connect with me</h4>
+          <div class="multi-action">
+            <a href="#">
+              <div class="action">
+                <p class="md-p">Add links</p>
+                <div class="image-container">
+                  <i class="fas fa-plus plus-icon"></i>
+                  <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-container">
+      <div class="footer-logo">
+        <h1><a href="#">Modality</a></h1>
+      </div>
+      <div class="footer-links-container">
+        <div class="footer-links">
+          <div class="links">
+            <h4><a href="#">Privacy Policy</a></h4>
+            <h4><a href="#">Terms of Use</a></h4>
+            <h4>
+              <a href="mailto:laura@findmodality.com"
+                >Contact: laura@findmodality.com</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
