@@ -12,4 +12,8 @@ $(document).ready(function () {
       $("#secondModal").modal("show");
     });
   });
+  $("#helpMe").on("click", function () {
+    $("#addDetails").modal("show");
+    $("#secondModal").modal("hide");
+  });
 });
