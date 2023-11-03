@@ -80,6 +80,17 @@
               </li>
             </ul>
           </nav>
+          <div class="profile-container mobile col-md-3 rm-pd">
+            <div class="mobile-profile">
+              <div class="profile">
+                <img src="./images/profile.png" alt="profile" />
+              </div>
+              <div class="name">
+                <h4>Jadis Montijo</h4>
+                <!-- <img src="./images/down.svg" alt="chevron" /> -->
+              </div>
+            </div>
+          </div>
         </div>
         <div class="profile-container col-md-3 rm-pd">
           <div class="profile">
@@ -164,11 +175,11 @@
     <section class="all-categories-container">
       <div class="all-categories">
         <div class="action-container">
-          <h4>Services</h4>
+          <h4>Offerings</h4>
           <div class="multi-action">
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#addOfferings">
               <div class="action">
-                <p class="md-p">Add services</p>
+                <p class="md-p">Add offerings</p>
                 <div class="image-container">
                   <i class="fas fa-plus plus-icon"></i>
                   <!-- <img class="img-icon" src="./images/plus.png" alt="" /> -->
@@ -180,7 +191,7 @@
         <div class="action-container">
           <h4>Values</h4>
           <div class="multi-action">
-            <a href="#">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#addValues">
               <div class="action">
                 <p class="md-p">Add values</p>
                 <div class="image-container">
@@ -368,13 +379,33 @@
               <h4>Get your Modality profile started</h4>
             </div>
             <div class="help-me">
-              <button
-                type="button"
-                id="helpMe"
-                class="btn-modal black md-p"
-              >
+              <button type="button" id="helpMe" class="btn-modal black md-p">
                 Help me generate my profile
               </button>
+            </div>
+            <div class="notification profile-notification">
+              <div class="notification-container">
+                <div class="close-notification">
+                  <button
+                    type="button"
+                    class="btn-close-notification"
+                    aria-label="Close"
+                    id="closeNotificationBtn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="notification-label">
+                  <p class="lg-p">Your profile has been generated!</p>
+                </div>
+                <div class="notification-description">
+                  <p class="sm-p">
+                    See our suggestion below and feel free to edit them to your
+                    liking. You can always re-generate a new profile using the
+                    button above.
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="modal-description">
               <p class="sm-p">
@@ -453,6 +484,20 @@
               <div class="input-field">
                 <input type="text" />
               </div>
+              <div class="selected-tags">
+                <div class="remove-tag">
+                  <button>Gender Identity Exploration</button>
+                  <div class="close-tag">| X</div>
+                </div>
+                <div class="remove-tag">
+                  <button>Transition Support</button>
+                  <div class="close-tag">| X</div>
+                </div>
+                <div class="remove-tag">
+                  <button>Leadership and Management</button>
+                  <div class="close-tag">| X</div>
+                </div>
+              </div>
             </div>
             <div class="modal-field">
               <div class="field-label">
@@ -481,6 +526,515 @@
               data-bs-dismiss="modal"
             >
               Save and View Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Offerings Modal -->
+    <div
+      class="modal fade custom-modal-container"
+      id="addOfferings"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Add a Offerings</h4>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                Describe the support you offer in at least 10 words and we will
+                use AI to suggest how to phrase the type of connections you
+                offer. Feel free to copy and paste or type in any unstructured
+                text, we'll help edit it.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Describe the support you offer</p>
+              </div>
+              <div class="comment">
+                <textarea name="comment" id="" cols="15" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Add my offerings manually
+            </button>
+            <button
+              type="button"
+              id="generateOfferingsBtn"
+              class="btn-modal black md-p"
+            >
+              Generate
+              <i class="fas fa-bolt" style="color: white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Offerings Modal Step-2 -->
+    <div
+      class="modal fade"
+      id="addOfferingsStepTwo"
+      tabindex="-1"
+      aria-labelledby="secondModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Add a Offering</h4>
+            </div>
+            <div class="help-me">
+              <button
+                type="button"
+                id="offeringsBack"
+                class="btn-modal black md-p"
+              >
+                Generate a new offer
+              </button>
+            </div>
+            <div class="actions-container">
+              <button
+                type="button"
+                id="delete"
+                class="btn-modal md-p"
+                style="color: #c41827"
+              >
+                Delete this connection
+                <i
+                  class="fas fa-check-circle"
+                  style="color: #c41827; border-radius: 50%"
+                ></i>
+              </button>
+
+              <button type="button" id="hide-offer" class="btn-modal md-p">
+                Hide this offer from my profile
+              </button>
+            </div>
+            <div class="notification offer-notification">
+              <div class="notification-container">
+                <div class="close-notification">
+                  <button
+                    type="button"
+                    class="btn-close-offer-notification"
+                    aria-label="Close"
+                    id="closeNotificationBtn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="notification-label">
+                  <p class="lg-p">Your offering has been generated!</p>
+                </div>
+                <div class="notification-description">
+                  <p class="sm-p">
+                    See our suggestion below and feel free to edit them to your
+                    liking. You can always re-generate a new offer using the
+                    button above.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                Fields marked with an <span class="required">*</span> are
+                required.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Service Name <span class="required">*</span></p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief title to describe what you're offering (eg.
+                  "Introductory Session" or "Student Support Session")
+                </p>
+              </div>
+              <div class="input-field">
+                <input type="text" placeholder="Trans Support" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Duration <span class="required">*</span></p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">In minutes</p>
+              </div>
+              <div class="input-field">
+                <input type="text" placeholder="50 minutes" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Price <span class="required">*</span></p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">In US Dollars</p>
+              </div>
+              <div class="input-field">
+                <input type="text" placeholder="$50" />
+              </div>
+            </div>
+
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Description</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief description of your practice in 250 characters or
+                  less. If you need more space to describe this service, use the
+                  section "More information".
+                </p>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="comment"
+                  id=""
+                  cols="15"
+                  rows="5"
+                  placeholder="Transition support is a specialized service designed to provide guidance and assistance to transgender individuals as they navigate their gender transition journey."
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">More information</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A long description of your service, including details, upto
+                  1000 characters.
+                </p>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="comment"
+                  id="more-info"
+                  cols="15"
+                  rows="10"
+                  placeholder="This service focuses on offering emotional, psychological, and practical support to help individuals shape their mindset and life for success during and after their transition. Transition support is a comprehensive service that aims to empower transgender individuals to lead fulfilling lives by providing the guidance and resources they need to navigate the challenges and opportunities that come with their gender transition journey. It focuses on personal grown, empowerment, and resilience to help individuals shape a successful and authentic life."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer screen-three">
+            <button type="button" id="save" class="btn-modal black md-p">
+              Save and continue
+              <i class="fas fa-arrow-right" style="color: white"></i>
+            </button>
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Save and view Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add values modal -->
+    <div
+      class="modal fade custom-modal-container"
+      id="addValues"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Add your Values</h4>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                Values are very important to us at Modality
+                <a href="#" style="text-decoration: underline"
+                  >(you can read about ours here).</a
+                >
+                Expressing them in your profile helps clients to determine if
+                you would be a good fit for them.
+              </p>
+              <br />
+              <p class="sm-p">
+                Describe your values in at least 10 words and we will use AI to
+                suggest values for you. Feel free to copy and paste or type in
+                any unstructured text, we'll help eidt it.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Describe your values</p>
+              </div>
+              <div class="comment">
+                <textarea name="comment" id="" cols="15" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Add my values manually
+            </button>
+            <button
+              type="button"
+              id="generateValuesBtn"
+              class="btn-modal black md-p"
+            >
+              Generate
+              <i class="fas fa-bolt" style="color: white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add values step two -->
+    <div
+      class="modal fade"
+      id="addValuesStepTwo"
+      tabindex="-1"
+      aria-labelledby="secondModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog custom-modal modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Your modal content goes here -->
+            <div class="modal-title">
+              <h4>Add Your Values</h4>
+            </div>
+            <div class="help-me">
+              <button
+                type="button"
+                id="valuesBack"
+                class="btn-modal black md-p"
+              >
+                Help me generate my values
+              </button>
+            </div>
+            <div class="notification value-notification">
+              <div class="notification-container">
+                <div class="close-notification">
+                  <button
+                    type="button"
+                    class="btn-close-value-notification"
+                    aria-label="Close"
+                    id="closeNotificationBtn"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="notification-label">
+                  <p class="lg-p">Your values have been generated!</p>
+                </div>
+                <div class="notification-description">
+                  <p class="sm-p">
+                    See our suggestion below and feel free to edit them to your
+                    liking. You can always re-generate a new offer using the
+                    button above.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-description">
+              <p class="sm-p">
+                Values are very important to us at Modality
+                <a href="#" style="text-decoration: underline"
+                  >(you can read about ours here).</a
+                >
+                Expressing them in your profile helps clients to determine if
+                you would be a good fit for them.
+              </p>
+              <br />
+              <p class="sm-p">you can add up to 3 values on your profile.</p>
+              <br />
+              <p class="sm-p">
+                Fields marked with an <span class="required">*</span> are
+                required.
+              </p>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Description</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief description of you embody your values in your practice
+                  (400 characters or less).
+                </p>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="comment"
+                  id=""
+                  cols="15"
+                  rows="5"
+                  placeholder="As a transgender coach and entrepreneur, my core values drive my approach and interactions. Drawing from personal experiences, I am committed to supporting and empowering individuals on their journeys of self-discovery, self-acceptance, and personal growth. I also help them achieve businessgoals, develop leadership skills, and foster an innovative and growth-oriented mindset."
+                ></textarea>
+              </div>
+            </div>
+            <div class="multi-options">
+              <div class="option-title"><h4>Value 1</h4></div>
+              <select id="myOption">
+                <option value="" disabled selected hidden>Option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Value title <span class="required">*</span></p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  1-2 words that describe the value you live by, for example
+                  "Self-acceptance" or "Intersectionality".
+                </p>
+              </div>
+              <div class="input-field">
+                <input type="text" placeholder="Self-acceptance" />
+              </div>
+            </div>
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Description</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief description of your practice in 250 characters or
+                  less.
+                </p>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="comment"
+                  id=""
+                  cols="15"
+                  rows="5"
+                  placeholder="The process by which a person or community controls their own life."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="multi-options">
+              <div class="option-title"><h4>Value 2</h4></div>
+              <select id="myOption">
+                <option value="" disabled selected hidden>Option</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Value title <span class="required">*</span></p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  1-2 words that describe the value you live by, for example
+                  "Self-acceptance" or "Intersectionality".
+                </p>
+              </div>
+              <div class="input-field">
+                <input type="text" placeholder="Leaadership and Management" />
+              </div>
+            </div>
+
+            <div class="modal-field">
+              <div class="field-label">
+                <p class="md-p">Description</p>
+              </div>
+              <div class="field-content">
+                <p class="xs-p">
+                  A brief description of your practice in 250 characters or
+                  less.
+                </p>
+              </div>
+              <div class="comment">
+                <textarea
+                  name="comment"
+                  id=""
+                  cols="15"
+                  rows="5"
+                  placeholder="Supporting entrepreneurs in enhancing their leadership and management skills, including team building, decision making, conflict resolution, and fostering a positive work culture."
+                ></textarea>
+              </div>
+            </div>
+            <div class="actions-container add-custom-field">
+              <button type="button" id="custom-field" class="btn-modal md-p">
+                Add another value
+                <i class="fas fa-plus plus-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="modal-footer screen-three">
+            <button type="button" id="save" class="btn-modal black md-p">
+              Save and continue
+              <i class="fas fa-arrow-right" style="color: white"></i>
+            </button>
+            <button
+              type="button"
+              class="btn-modal md-p"
+              data-bs-dismiss="modal"
+            >
+              Save and view Profile
             </button>
           </div>
         </div>
